@@ -40,7 +40,7 @@ public class GameController {
         games.put(gameID, newGame);
         gamneID++;
 
-        return gameID;
+        return newGame.getID();
     }
 
     /**
