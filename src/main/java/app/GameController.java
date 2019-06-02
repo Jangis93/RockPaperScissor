@@ -20,13 +20,13 @@ import java.util.Map;
 public class GameController {
 
     private GameService gameService;
-    private int counter;
+    private int gameID;
     private Map<Integer, Game> games;
 
     public GameController() {
         gameService = new GameService();
         games = new HashMap<>();
-        counter = 0;
+        gameID = 0;
     }
 
     /**
@@ -36,10 +36,9 @@ public class GameController {
     @RequestMapping(method = RequestMethod.POST, value = "")
     @ResponseStatus(HttpStatus.CREATED)
     public int startNewGame(@RequestParam(value = "name") String name) {
-        int gameID = counter;
         Game newGame = new Game(gameID, new Player(name));
         games.put(gameID, newGame);
-        counter++;
+        gamneID++;
 
         return gameID;
     }
