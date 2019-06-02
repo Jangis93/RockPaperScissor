@@ -18,7 +18,7 @@ and then execute it with
 java -jar build/libs/rock-paper-scissor-0.1.0.jar
 ```
 
-The application starts a web swerver that listens to the 8080 port. The follwing is a example session of how to play the game using curl. 
+The application starts a web server that listens to the 8080 port. The follwing is a example session of how to play the game using curl. 
 
 1. We create a new game with a post request and a name in the request body. We recieve an ID of the game to send to a friend that we want to face. 
 
@@ -58,7 +58,7 @@ Date: Sat, 01 Jun 2019 21:40:35 GMT
 
 ```
 
-4. Then both players can request the result by a GET request. 
+4. Then both players can request the result by a GET request with the ID of the game in the path. 
 ```shell
 curl -i -X GET http://localhost:8080/api/games/1
 HTTP/1.1 200
