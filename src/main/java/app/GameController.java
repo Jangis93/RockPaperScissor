@@ -38,9 +38,9 @@ public class GameController {
     public int startNewGame(@RequestParam(value = "name") String name) {
         Game newGame = new Game(gameID, new Player(name));
         games.put(gameID, newGame);
-        gamneID++;
+        gameID++;
 
-        return newGame.getID();
+        return newGame.getId();
     }
 
     /**
