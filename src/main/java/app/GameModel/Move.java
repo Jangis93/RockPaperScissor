@@ -1,10 +1,10 @@
 package app.GameModel;
 
-/*
-RULES:
-PAPPER BEATS ROCK
-ROCK BEATS SCISSOR
-SCISSOR BEATS PAPPER
+/**
+ * RULES:
+ * PAPPER BEATS ROCK
+ * ROCK BEATS SCISSOR
+ * SCISSOR BEATS PAPPER
  */
 public enum Move {
 
@@ -29,5 +29,9 @@ public enum Move {
         }
     };
 
+    /**
+     * @param move the move of the second player
+     * @return the result from player ones perspective
+     */
     public abstract boolean evaluate(Move move);
 }
